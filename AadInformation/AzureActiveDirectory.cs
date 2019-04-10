@@ -13,7 +13,7 @@ namespace AadInformation
 
             try
             {
-                var users = await client.Users.OrderBy(group => group.DisplayName).ExecuteAsync();
+                var users = await client.Users.OrderBy(user => user.DisplayName).ExecuteAsync();
                 foreach (var user in users.CurrentPage)
                 {
                     Console.WriteLine(user.DisplayName + " " + user.ObjectId);
